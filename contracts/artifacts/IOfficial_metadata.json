@@ -6,11 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -37,8 +32,18 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "lga",
+						"name": "name",
 						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Post",
+						"name": "position",
+						"type": "uint8"
 					},
 					{
 						"internalType": "uint256",
@@ -47,120 +52,100 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "stateCode",
+						"name": "year",
 						"type": "uint256"
 					}
 				],
-				"name": "addLocalGovernment",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "string",
-								"name": "lga",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "state",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "stateCode",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "lgaCode",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct VoteZone",
-						"name": "_zone",
-						"type": "tuple"
-					}
-				],
+				"name": "addCandidate",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "stateName",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "stateCode",
-						"type": "uint256"
-					}
-				],
-				"name": "addState",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getLocalGovernment",
-				"outputs": [
-					{
 						"components": [
 							{
 								"internalType": "string",
-								"name": "lga",
+								"name": "name",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "state",
+								"name": "nin",
 								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "stateCode",
-								"type": "uint256"
 							},
 							{
 								"internalType": "uint256",
 								"name": "lgaCode",
 								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "canVote",
+								"type": "bool"
 							}
 						],
-						"internalType": "struct VoteZone[]",
-						"name": "",
-						"type": "tuple[]"
+						"internalType": "struct Voter",
+						"name": "voter",
+						"type": "tuple"
 					}
 				],
-				"stateMutability": "view",
+				"name": "registerVoter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getOwner",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "nin",
+						"type": "uint256"
+					}
+				],
+				"name": "removeCandidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "officialAddress",
 						"type": "address"
 					}
 				],
-				"stateMutability": "view",
+				"name": "removeOfficial",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getStates",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "string[]",
-						"name": "",
-						"type": "string[]"
+						"internalType": "uint256",
+						"name": "nin",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "suspendCandidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "officialAddress",
+						"type": "address"
+					}
+				],
+				"name": "suspendOfficial",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -177,7 +162,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/EVote.sol": "EVote"
+			"contracts/EVote.sol": "IOfficial"
 		},
 		"evmVersion": "london",
 		"libraries": {},

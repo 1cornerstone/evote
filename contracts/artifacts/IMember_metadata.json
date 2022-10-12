@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.8+commit.dddeac2f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "castVote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "watchVote",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "whoIFor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EVote.sol": "IMember"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EVote.sol": {
+			"keccak256": "0x7c5204df31c4aa2d89d42da865d94919a45a48fb0b2581fe3b9ed359fa18b37d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e29c46e18561017502d27155852225fe87bc46afb8c7ae3da9ac87a07b48e796",
+				"dweb:/ipfs/QmchRv5skqkQGpAzNzXavjex1MuadYSqyWSyDLJ9KFF8D5"
+			]
+		}
+	},
+	"version": 1
+}

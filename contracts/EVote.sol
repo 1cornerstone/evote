@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.8;
 
-import './structs/Official.sol';
 // user can register base on state and  country
 // create Applicant  only owner
 //  set vote day
@@ -9,6 +8,75 @@ import './structs/Official.sol';
 //  user can watch vote as e edy go
 // https://medium.com/blockcentric/ethereum-dapp-portfolio-ideas-21e1aac6dc52
 //https://www.ethhole.com/challenge
+
+
+enum Post{
+    President,
+    Senator,
+    Governor,
+    Assembly,
+    Respresentative
+}
+
+struct Official{
+     string name;
+    uint lgaCode;
+    address officialAddr;
+    bool isActive;
+}
+
+struct VoteZone{
+    string lga;
+    string state;
+    uint stateCode;
+    uint lgaCode;
+}
+
+struct Candidate{
+    string name;
+    string nin;
+    uint lgaCode;
+    uint year;
+    Post position;
+    bool active;
+}
+
+struct Voter{
+   string name;
+    string nin;
+    uint lgaCode;  
+    bool canVote;
+    // byte uniqueVotePin;    
+}
+
+
+interface IOfficial{
+
+    function accredictedNewOfficial(address officialAddress, string calldata officialName, uint lgaCode) external;
+    
+    function suspendOfficial(address officialAddress) external;
+
+    function removeOfficial(address officialAddress) external;
+
+    function addCandidate(string calldata name, uint nin, Post position, uint lgaCode, uint year) external;
+
+    function suspendCandidate(uint nin) external;
+
+    function removeCandidate(uint nin) external;
+
+    function registerVoter(Voter calldata voter) external;
+}
+
+interface IMember{
+
+    function castVote(uint nin) external;
+
+    function whoIFor() external view;
+
+    function watchVote() external view;
+
+}
+
 
 contract EVote{
     
@@ -66,6 +134,7 @@ contract EVote{
 
     function accredictedNewOfficial(address officialAddress, string calldata officialName, uint lgaCode) external isOwnerMod{
         require(accredictedZone[lgaCode].lgaCode == 0 , "local government does not exist");
+       
         accredictedOfficialAddr.push(officialAddress);
         accredictedOfficialDetails[officialAddress] = Official({
          name: officialName, lgaCode: lgaCode,
@@ -73,9 +142,6 @@ contract EVote{
         isActive: true});
         //check for the code that match the selec
     }
-
-    
-
 
 
 }
