@@ -1,0 +1,73 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {
+				"@_5": {
+					"entryPoint": null,
+					"id": 5,
+					"parameterSlots": 0,
+					"returnSlots": 0
+				}
+			},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220bc932ff94a5c63b483db1f44ae9c52f88a5e2f561d8104451650d3d5da741cd964736f6c63430008080033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xBC SWAP4 0x2F 0xF9 0x4A 0x5C PUSH4 0xB483DB1F DIFFICULTY 0xAE SWAP13 MSTORE 0xF8 DUP11 0x5E 0x2F JUMP SAR DUP2 DIV GASLIMIT AND POP 0xD3 0xD5 0xDA PUSH21 0x1CD964736F6C634300080800330000000000000000 ",
+			"sourceMap": "60:38:0:-:0;;;77:16;;;;;;;;;;60:38;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "6080604052600080fdfea2646970667358221220bc932ff94a5c63b483db1f44ae9c52f88a5e2f561d8104451650d3d5da741cd964736f6c63430008080033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xBC SWAP4 0x2F 0xF9 0x4A 0x5C PUSH4 0xB483DB1F DIFFICULTY 0xAE SWAP13 MSTORE 0xF8 DUP11 0x5E 0x2F JUMP SAR DUP2 DIV GASLIMIT AND POP 0xD3 0xD5 0xDA PUSH21 0x1CD964736F6C634300080800330000000000000000 ",
+			"sourceMap": "60:38:0:-:0;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "12600",
+				"executionCost": "66",
+				"totalCost": "12666"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		}
+	]
+}

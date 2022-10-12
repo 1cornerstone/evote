@@ -1,0 +1,212 @@
+{
+	"compiler": {
+		"version": "0.8.8+commit.dddeac2f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "officialAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "officialName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lgaCode",
+						"type": "uint256"
+					}
+				],
+				"name": "accredictedNewOfficial",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "lga",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lgaCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "stateCode",
+						"type": "uint256"
+					}
+				],
+				"name": "addLocalGovernment",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "lga",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "state",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "stateCode",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lgaCode",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct VoteZone",
+						"name": "_zone",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "stateName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "stateCode",
+						"type": "uint256"
+					}
+				],
+				"name": "addState",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLocalGovernment",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "lga",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "state",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "stateCode",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lgaCode",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct VoteZone[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getStates",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EVote.sol": "EVote"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EVote.sol": {
+			"keccak256": "0x0be8301452b487f4c7de92d565a14f87c8b6af79b8bd5e62a1a5b5ac5b8d5479",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://53236d24d0a269faa82843d41a846e5f678ae4598e16a2dc659423dbbddf6e1b",
+				"dweb:/ipfs/QmYtf3NgYkiq8WWAe6qJ81cAXwENP9Tk4vk5462byiByq1"
+			]
+		},
+		"contracts/structs/Official.sol": {
+			"keccak256": "0x148b44bf9df50649f921cd53362ab04332b764f8df5fd4b520fe0a5ddf1dd3ac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5ec30ec3f96128ad4a5c8164789484d5eb66e789394d4e1d9fe09d2ac44dc984",
+				"dweb:/ipfs/QmTSpZfzbGXM8bKh68ZsxUvfaM4hcSaWhZ8XbtpHgR5HAz"
+			]
+		}
+	},
+	"version": 1
+}
